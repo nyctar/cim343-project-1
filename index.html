@@ -11,10 +11,16 @@
     <h2>How you should NOT refer to JavaScript?</h2>
     <button onclick = "check(this)">JS</button>
     <button onclick = "check(this)">Vanilla JS</button>
-    <button onclick = "check(this)">Java</button>
+    <button onclick = "check(this)" class = "correct">Java</button>
+
+    <h2>What does the C in CSS stand for</h2>
+    <button onclick = "check(this)" class = "correct">Cascading</button>
+    <button onclick = "check(this)">Cat</button>
+    <button onclick = "check(this)">Compounding</button>
+
     <script>
         function check(button) {
-            if(button.textContent == "Java") {
+            if(button.classList.contains("correct")) {
                 button.style.background ="green";
             } else {
                 button.style.background ="red";
