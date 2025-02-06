@@ -9,8 +9,17 @@
     <h1>Web Quiz</h1>
 
     <h2>How you should NOT refer to JavaScript?</h2>
-    <button>JS</button>
-    <button>Vanilla JS</button>
-    <button>Java</button>
+    <button onclick = "check(this)">JS</button>
+    <button onclick = "check(this)">Vanilla JS</button>
+    <button onclick = "check(this)">Java</button>
+    <script>
+        function check(button) {
+            if(button.textContent == "Java") {
+                button.style.background ="green";
+            } else {
+                button.style.background ="red";
+            }
+        }
+    </script>
 </body>
 </html>
