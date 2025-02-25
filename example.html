@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: indigo;
+        }
+        button {
+            background: ghostwhite;
+            border: none;
+            color: inherit;
+            /*padding: 8px 16px 16px 8px; /*top right bottom left*/
+            padding: 8px 16px; /*top-bottom, right-left*/
+            transition: 0.5s ease;
+        }
+
+        button:hover {
+            background: lavender;
+            cursor: pointer;
+            padding: 8px 24px;
+            /*scale: 1.2;*/
+        }
+
+        button.clicked.correct {
+            background: turquoise;
+        }
+        
+        button.clicked:not(.correct) {
+            background: deeppink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Can You Spot the AI-Generated Image?</h1>
+
+    <div class="question">
+    <h2>How you should NOT refer to JavaScript?</h2>
+
+    <button onclick = "check(this)">JS</button>
+    <button onclick = "check(this)">Vanilla JS</button>
+    <button onclick = "check(this)" class = "correct">Java</button>
+    </div>
+
+    <div class="question"></div>
+    <h2>What does the C in CSS stand for</h2>
+
+    <button onclick = "check(this)" class = "correct">Cascading</button>
+    <button onclick = "check(this)">Cat</button>
+    <button onclick = "check(this)">Compounding</button>
+    </div>
+
+    <script>
+        function check(button) {
+            button.classList.add("clicked");
+            if(button.classList.contains("correct")) {
+                // button.style.background ="turquoise";
+            } else {
+                // button.style.background ="deeppink";
+                // button.style.color = "white";
+            }
+                    // find current question
+            let question = button.closest(".question");
+
+            // find all button elements within question
+            let buttons = question.querySelectorAll("button");
+
+            // for each button on my list
+            for (let button of buttons) {
+                // disable them
+                button.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

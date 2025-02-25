@@ -3,78 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            color: indigo;
-        }
-        button {
-            background: ghostwhite;
-            border: none;
-            color: inherit;
-            /*padding: 8px 16px 16px 8px; /*top right bottom left*/
-            padding: 8px 16px; /*top-bottom, right-left*/
-            transition: 0.5s ease;
-        }
-
-        button:hover {
-            background: lavender;
-            cursor: pointer;
-            padding: 8px 24px;
-            /*scale: 1.2;*/
-        }
-
-        button.clicked.correct {
-            background: turquoise;
-        }
-        
-        button.clicked:not(.correct) {
-            background: deeppink;
-            color: white;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <title>The Darién Gap</title>
 </head>
 <body>
-    <h1>Web Quiz</h1>
+    <div class="container">
+        <div class="landing" id="landing">
+            <h1>The Darién Gap</h1>
+            <img src="darien-journey.webp" alt="Migrants crossing the Darién Gap"><br>
+            <small class="caption"><em><a href="https://interactive.thenewhumanitarian.org/stories/2022/05/10/us-asylum-darien-gap-cuba-central-america-mexico/", target="_blank">Image from Joshua Collins, The New Humanitarian</a></em></small>
+            <p>In search of a better future, thousands of migrants flee their countries to escape repression and risk their lives to cross the Darién Gap.
+                The 97-kilometer stretch of jungle is the only overland route that connects the Americas, with most migrants hoping to reach the US-Mexico border.
+                Along the way, incredible dangers, both natural and human, await.</p>
+            <p>
+                <strong>You are one of them.</strong>
+            </p>
+            <p>
+                Having recently arrived in Acandí, Colombia, the starting point, you must now continue your journey by trekking through
+                the treacherous terrain of the Darién Gap to reach Bajo Chiquito, Panama.<br><br>
+            </p>
+                <div id="button-grid-scenario">
+                    <button id="startbutton">Start</button>
+                </div>
+        </div>
 
-    <div class="question">
-    <h2>How you should NOT refer to JavaScript?</h2>
+        <div class="container" id="scenario">
+            <div id="text"><p>Text</p></div>
+            <div id="scenario-image"></div>
+            <div class="box">
+                <div id="button-options" class="button-grid" >
+                    <button class = "button">Option1</button>
+                    <button class = "button">Option2</button>
+                </div>
+            <div id="button-grid-giveup" >
+                <button id = "giveup-button">Give Up</button>
+            </div>
+            </div>
+        </div>
 
-    <button onclick = "check(this)">JS</button>
-    <button onclick = "check(this)">Vanilla JS</button>
-    <button onclick = "check(this)" class = "correct">Java</button>
+
+        <div class="container" id="ending">
+            <h1>The End</h1>
+            <p>
+                The Darién Gap is just a small but harrowing part of the journey migrants take in search of a better future. The jungle is unforgiving, with dangerous terrain and wildlife.
+                But an even greater dangers lurk—robbery, smuggling, human trafficking, physical and sexual violence—driven by lawlessness and exploitation. Despite these threats, thousands still choose
+                to cross with desperation and hope.
+            </p>
+            <p>
+                Based on stories reported in the region, this game reflects only a fraction of the harsh decisions and risks real migrants must endure to survive.
+                <strong>It is merely a rough approximation, unable to fully capture the gravity of their struggle.</strong>
+            </p>
+            <p>
+                <em class="reference">Story based on '<a href="https://interactive.thenewhumanitarian.org/stories/2022/05/10/us-asylum-darien-gap-cuba-central-america-mexico/" target="_blank">The invisibles: A Cuban asylum seeker’s dangerous odyssey</a>,' The New Humanitarian, 2022, and '<a href="https://www.ifrc.org/article/echoes-jungle-unseen-human-stories-darien-gap-0#:~:text=Facing%20diverse%20threats&text=Then%20there%20are%20the%20human,people%20died%20in%20the%20Dari%C3%A9n." target="_blank">Echoes from the jungle: The unseen human stories of the Darien Gap</a>,' International Federation of Red Cross and Red Crescent Societies, 2022.</em>
+            </p>
+                <div id="button-grid-ending" class="button-grid-ending">
+                    <button id="learnmore-button">Learn More</button>
+                </div>
+        </div>
+
+        <div class="container" id="article">
+            <h1>The Journey Across the Darién Gap</h1>
+            <img src="placeholder.png">
+            <p>
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Laoreet blandit quis iaculis lobortis nisl lobortis. Rutrum tincidunt erat sem viverra ultrices. Sapien congue ante malesuada iaculis suspendisse; vestibulum mauris eros. Facilisis habitasse phasellus duis etiam semper lorem varius. Adipiscing aliquam tortor odio urna donec. Cras dui luctus mi fringilla ut pharetra. Proin dolor est placerat facilisi pretium suspendisse, aliquet luctus. Montes feugiat cras orci a penatibus etiam ultrices suscipit.
+            </p>
+            <p>
+                Himenaeos platea maximus purus; sociosqu lorem phasellus ultrices eu. Est sem morbi cursus at aenean metus. Cursus tempus porttitor quisque turpis posuere finibus. Id fringilla mauris aptent interdum convallis cras morbi est natoque. Massa massa accumsan; suscipit per habitant turpis dictum sit. Consequat tincidunt odio posuere sagittis mollis nullam nisl. Habitasse sollicitudin amet hendrerit; integer duis urna? Sem gravida enim maecenas feugiat per nec facilisis quisque? Condimentum ornare praesent malesuada ligula suscipit. Faucibus sagittis luctus tincidunt eros urna posuere!
+            </p>
+            <p>
+                Est lobortis facilisi cubilia lobortis porta posuere scelerisque. Habitasse volutpat adipiscing lectus urna; commodo lectus quisque. Interdum dictum interdum; suscipit primis volutpat massa congue. Nulla mi habitasse quis morbi curae. Augue parturient mattis vivamus; aliquet malesuada bibendum. Dis scelerisque donec iaculis posuere class litora. Mi mollis maecenas amet tellus sapien. Ipsum vestibulum natoque posuere donec pellentesque adipiscing sem lobortis sodales. Nisi fames natoque ipsum viverra et leo torquent at.
+            </p>
+            <p>
+                Ipsum ridiculus nunc; urna ligula ridiculus fames. Conubia netus metus pretium auctor molestie molestie arcu ultrices justo. Magnis natoque nisi; magnis non felis mauris sociosqu. Dictum ut cras a habitant luctus ullamcorper augue. Volutpat ipsum vulputate etiam sed, pharetra sapien conubia. Platea mauris risus ante, cubilia lorem torquent mollis volutpat. Dui mollis etiam aenean vestibulum nullam tincidunt sociosqu feugiat. Imperdiet commodo curae praesent rutrum; sem volutpat quisque turpis. Magnis himenaeos pharetra posuere ut justo consectetur justo.
+            </p>
+            <p>
+                Quam lacus consectetur justo rutrum interdum. Nunc rutrum nostra accumsan diam primis egestas enim accumsan. Feugiat duis habitasse a primis mattis lectus hendrerit velit. Himenaeos habitant proin class mattis elit vel. Lacinia hendrerit fames; volutpat congue vivamus erat. Metus sit nascetur morbi ligula nec velit. Class justo duis velit habitasse lobortis tempus inceptos habitasse. Quisque vulputate mauris taciti dui facilisi.
+            </p>
+                <div id="button-options-article" class="button-grid-article">
+                    <button id="playagain-button">Play Again</button>
+                </div>
+        </div>
     </div>
-
-    <div class="question"></div>
-    <h2>What does the C in CSS stand for</h2>
-
-    <button onclick = "check(this)" class = "correct">Cascading</button>
-    <button onclick = "check(this)">Cat</button>
-    <button onclick = "check(this)">Compounding</button>
-    </div>
-
-    <script>
-        function check(button) {
-            button.classList.add("clicked");
-            if(button.classList.contains("correct")) {
-                // button.style.background ="turquoise";
-            } else {
-                // button.style.background ="deeppink";
-                // button.style.color = "white";
-            }
-                    // find current question
-            let question = button.closest(".question");
-
-            // find all button elements within question
-            let buttons = question.querySelectorAll("button");
-
-            // for each button on my list
-            for (let button of buttons) {
-                // disable them
-                button.disabled = true;
-            }
-        }
-    </script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+/*global*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #323031;
+}
+
+/*container*/
+.container {
+    width: 800px;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#scenario {
+    /*starting state*/
+    display: none;
+}
+#ending {
+    /*starting state*/
+    display: none;
+}
+#article {
+    /*starting state*/
+    display: none;
+}
+
+/*buttons*/
+#button-options-article, #button-grid-ending, #button-grid-giveup, #button-grid-scenario {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 40px;
+    justify-items: center;
+
+}
+
+#playagain-button, #giveup-button, #learnmore-button, #startbutton, .button {
+    background-color: #008DD5;
+    color: #FFFFFF;
+    border: 1px solid #008DD5;
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: auto;
+    outline: none;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    transition: 0.5s ease;
+}
+#giveup-button {
+    background-color: #CC2936;
+    border: 1px solid #CC2936;
+}
+
+#playagain-button:hover, #learnmore-button:hover, #startbutton:hover, .button:hover {
+    background-color: #005f8f;
+    border-color: black;
+    cursor: pointer;
+}
+
+#giveup-button:hover {
+    background-color: #8d1b24;
+    border-color: black;
+    cursor: pointer;
+}
+
+/*text*/
+#text, p {
+    font-family: "Space Grotesk", serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+}
+
+.caption {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.reference {
+    display: block;
+    font-family: "Space Grotesk", serif;
+    font-size: smaller;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+}
+
+strong {
+    font-family: "Space Grotesk", serif;
+}
+
+/*animation*/
+@keyframes pulse {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+  
+  body.pulse-animation {
+    animation: pulse 0.5s ease;
+  }
